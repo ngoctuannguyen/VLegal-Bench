@@ -1,4 +1,4 @@
-# CLS CMC Legal Benchmark
+# VLegal-Benchmark
 
 A comprehensive Vietnamese legal benchmark dataset for evaluating Large Language Models (LLMs) on various legal NLP tasks.
 
@@ -24,9 +24,9 @@ This benchmark contains 22 legal tasks organized into 5 main categories, coverin
 ## 📁 Dataset Structure
 
 ```
-cls-cmc-legal-benchmark/
+VLegal-Benchmark/
 ├── 1.1/  # Legal Entity Recognition
-│   ├── 1_1_legal_entity_recognition_verified_reformatted.jsonl
+│   ├── 1_1.jsonl
 │   └── prompt_1_1.py
 ├── 1.2/  # Legal Topic Classification
 ├── 1.3/  # Legal Concept Recall
@@ -51,13 +51,6 @@ cls-cmc-legal-benchmark/
 ├── 5.3_law_vs_ethics/  # Ethical Consistency Assessment
 └── 5.4/  # Unfair Contract Detection 
 ```
-
-**Note**: Tasks 3.3 and 3.4 contain two dataset files each:
-- Standard version: `*_remove_content_verified_reformatted.jsonl`
-- Added-content version: `*_verified_reformatted.jsonl`
-
----
-
 ## 📚 Task Categories
 
 ### Category 1: Legal Information Extraction
@@ -185,26 +178,4 @@ metrics = Metrics(result_path="./1.1/1_1_llm_test_results_model_name.json")
 results = metrics.eval()
 print(results)
 ```
-
-
-## 🤝 Contributing
-
-When adding new tasks or modifying existing ones:
-1. Maintain the folder structure `X.Y/`
-2. Include both dataset (`.jsonl`) and prompt (`prompt_X_Y.py`) files
-3. Update this README with task description
-4. Test with the evaluation pipeline
-
----
-
-## 📄 License
-
-Please refer to the repository license for usage terms and conditions.
-
----
-
-## 📧 Contact
-
-For questions or issues, please open an issue in the repository or contact the maintainers.
-
-## 📧 Citation
+We release a partial version of the benchmark exclusively for the review phase.
